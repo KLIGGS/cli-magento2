@@ -28,20 +28,21 @@ Magento 2.4.3 requires Elastic Search 7. Else you catalog disappears.
 
 Example with bonsai.io
 
+```
 bin/magento config:set catalog/search/elasticsearch7_server_hostname https://xxxxxx-000000.us-east-1.bonsaisearch.net
 bin/magento config:set catalog/search/elasticsearch7_server_port 443
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 1
 bin/magento config:set catalog/search/elasticsearch7_index_prefix magento2
 bin/magento config:set catalog/search/elasticsearch7_username xxxxxxxx
 bin/magento config:set catalog/search/elasticsearch7_password xxxxxxxx
-
+```
 Example local Elastic Search
-
+```
 bin/magento config:set catalog/search/elasticsearch7_server_hostname localhost
 bin/magento config:set catalog/search/elasticsearch7_server_port 9200
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 0
 bin/magento config:set catalog/search/elasticsearch7_index_prefix magento2
-
+```
 
 # Error 
 
