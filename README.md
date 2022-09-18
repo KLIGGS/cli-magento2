@@ -68,6 +68,7 @@ CSS, JS and Media resources resulting in Error 400 or Error 500. Following direc
 <magento-root>/pub/static/
 <magento-root>/pub/media/
 
+[Adobe Help configure permissions](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=en)
 * Access
 * Folder / File Permissions
 * SymLinksIfOwnerMatch in .htaccess files
