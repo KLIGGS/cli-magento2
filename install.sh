@@ -43,5 +43,10 @@ bin/magento cache:flush
 composer require magento/data-migration-tool:2.4.2
                 
 # disable extensions may not required i.e. in DEV
+# keep order of commands
 bin/magento module:disable Amazon_Login Amazon_Payment Dotdigitalgroup_Email Dotdigitalgroup_Chat Dotdigitalgroup_ChatGraphQl Dotdigitalgroup_EmailGraphQl Dotdigitalgroup_Sms Klarna_Core Klarna_Ordermanagement Klarna_Kp Klarna_Onsitemessaging Klarna_KpGraphQl PayPal_Braintree PayPal_BraintreeGraphQl Temando_ShippingRemover Vertex_Tax Vertex_AddressValidationApi Vertex_RequestLoggingApi Vertex_RequestLogging Vertex_AddressValidation Yotpo_Yotpo
-                bin/magento module:disable Amazon_Core 
+bin/magento module:disable Amazon_Core
+
+magento setup:di:compile
+magento setup:static-content:deploy
+magento cache:clean
