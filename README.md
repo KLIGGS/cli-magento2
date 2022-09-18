@@ -33,7 +33,7 @@ Magento 2.4.3 requires Elastic Search 7. If there is no connection you Product C
 
 Example with Online Service at bonsai.io
 
-```bash
+```php
 bin/magento config:set catalog/search/elasticsearch7_server_hostname https://xxxxxx-000000.us-east-1.bonsaisearch.net
 bin/magento config:set catalog/search/elasticsearch7_server_port 443
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 1
