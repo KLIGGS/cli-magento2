@@ -55,6 +55,12 @@ Find `.htaccess` files with option FollowSymLinks
 ```sh
   find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
 ```
+Check php memory - 2G required and modules
+```sh
+php -i | grep 'memory_limit'
+php -r 'phpinfo(INFO_MODULES);'
+```
+  
 #### Error HTTP 400
 
 CSS, JS and Media resources resulting in Error 400 or Error 500. Following directories have to be checked.
