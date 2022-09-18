@@ -1,7 +1,7 @@
 # Magento 2.4.3 CE Install
 
 
-Installation of Magento 2.4.3-p1 CE with some hints and solutions in short.
+Installation of Magento 2.4.3-p1 CE with some hints and solutions in short form.
 
 ## General
 
