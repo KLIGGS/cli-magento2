@@ -105,7 +105,7 @@ bin/magento config:set catalog/search/elasticsearch7_index_prefix magento2
 You may check your index at the server in case you Magento Catalog don't show i.e. after an upgrade from older versions.
 
 ### Example Elastic Search at elastic.io
-https://cloud.elastic.co/login
+[Elastic Cloud Sign-In](https://cloud.elastic.co/login)
 
 ```php
 bin/magento config:set catalog/search/elasticsearch7_server_hostname i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io
