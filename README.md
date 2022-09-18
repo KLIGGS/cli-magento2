@@ -87,12 +87,12 @@ https://cloud.elastic.co/login
 bin/magento config:set catalog/search/elasticsearch7_server_hostname i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io
 bin/magento config:set catalog/search/elasticsearch7_port 9243
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 1
-bin/magento config:set catalog/search/elasticsearch7_username xxxxxx
-bin/magento config:set catalog/search/elasticsearch7_password ******
+bin/magento config:set catalog/search/elasticsearch7_username <username>
+bin/magento config:set catalog/search/elasticsearch7_password <password>
 ```
 If errors occur check the service by using curl command (Note: -u option with username:password)
 ```shell
-curl -u xxxxxx:****** https://i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io:9243
+curl -u <username>:<password> https://i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io:9243
 ```
 
 ### Magento CLI config search engine
