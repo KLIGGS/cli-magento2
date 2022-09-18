@@ -7,7 +7,7 @@ Installation of Magento 2.4.3-p1 CE with some hints and solutions.
 
 * Help https://devdocs.magento.com/guides/v2.4/install-gde/composer.html
 * PHP Version > use 7.4 (not 8)
-* Elasticsearch 7 is MUST. Disabling like in older M2 Version won't work and magento 2 catalog disappears.
+* Elasticsearch 7 is **MUST**. Disabling like in older M2 Version won't work and magento 2 catalog disappears.
 * Commands on your own risk.
 
 ## Hints
@@ -40,8 +40,6 @@ nano <magento-root>/app/etc/di.xml
 #### Error Magento Catalog disappeared or don't show up
 Enable a valid Elastic Search 7 connection. Note: If an older version i.e. Elastic Search is installed Magento 2 backend configuration confirms a valid connection but it won't work. Elastic Search 7.1 ist MUST.
 
-bin/magento config:set catalog/search/engine none
-
 #### Error PHP Code Dependeny Injection 
 Check your PHP Version you are really running. By command or by <?php phpinfo();?> in your <magento-root>/pub/ Folder. Consider to run the php cli with php7.4 -f instead of php -f
 ```php
@@ -51,7 +49,12 @@ php7.4 <magento-root>/bin/magento setup:static-content:deploy
 php7.4 <magento-root>/bin/magento cache:clean
 ```
 #### Error HTTP 500
-Check your error log regarding misconfigurations and .htaccess directives. Most hosting providers don't support FollowSymLinks. SymLinksIfOwnerMatch
+Check your error.log regarding misconfigurations and .htaccess directives. Some hosting enviroments don't support FollowSymLinks. Use SymLinksIfOwnerMatch instead.
+
+Find `.htaccess` files with option FollowSymLinks
+```sh
+  find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
+```
 
   
 ## Elastic Search 7
@@ -110,5 +113,3 @@ Enable Elastic Search
 bin/magento setup:install --enable-modules=Magento_InventoryElasticsearch,Magento_Elasticsearch7,Magento_Elasticsearch6,Magento_Elasticsearch
 bin/magento module:enable Magento_Elasticsearch7 Magento_InventoryElasticsearch
 ```
-
-
