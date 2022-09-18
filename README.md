@@ -43,7 +43,7 @@ bin/magento config:set catalog/search/elasticsearch7_password ******
 ```
 Example Elastic Search local on server system
 
-```bash
+```php
 bin/magento config:set catalog/search/elasticsearch7_server_hostname localhost
 bin/magento config:set catalog/search/elasticsearch7_server_port 9200
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 0
@@ -55,7 +55,7 @@ You may check your index at the server in case you Magento Catalog don't show i.
 Example Elastic Search at elastic.io
 https://cloud.elastic.co/login
 
-```bash
+```php
 bin/magento config:set catalog/search/elasticsearch7_server_hostname i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io
 bin/magento config:set catalog/search/elasticsearch7_port 9243
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 1
@@ -63,7 +63,7 @@ bin/magento config:set catalog/search/elasticsearch7_username xxxxxx
 bin/magento config:set catalog/search/elasticsearch7_password ******
 ```
 If errors occur check the service by using curl command (Note: -u option with username:password)
-```bash
+```shell
 curl -u xxxxxx:****** https://i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io:9243
 ```
 # Error 
