@@ -29,7 +29,7 @@ php7.4 bin/magento
 With Magento 2.4.3 some configurations changed. Some solutions to errors.
 
 #### Error Maria DB Version
-Alter max Maria DB Version to 10.[2-5] and run again intall command if minor higher version.
+Installing is aborted if Maria Database 10.5 is installed. Alter the di.xml file to parameter 10.[2-5] and run again.
 ```php
 nano <magento-root>/app/etc/di.xml
 ```
