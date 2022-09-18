@@ -21,6 +21,11 @@ Commands on your own risk. Installation of Magento 2.4.3-p1 with some hints and 
 
 * some hosting platforms display wrong PHP Version by using php -v
 * use for M2.4.3 php7.4 bin/magento
+
+# Install Errors
+With Magento 2.4.3 some configurations changed. 
+
+bin/magento config:set catalog/search/engine none
 * 
 # Elastic Search 7
 
@@ -28,7 +33,7 @@ Magento 2.4.3 requires Elastic Search 7. If there is no connection you Product C
 
 Example with Online Service at bonsai.io
 
-```
+```bash
 bin/magento config:set catalog/search/elasticsearch7_server_hostname https://xxxxxx-000000.us-east-1.bonsaisearch.net
 bin/magento config:set catalog/search/elasticsearch7_server_port 443
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 1
@@ -38,7 +43,7 @@ bin/magento config:set catalog/search/elasticsearch7_password ******
 ```
 Example Elastic Search local on server system
 
-```
+```bash
 bin/magento config:set catalog/search/elasticsearch7_server_hostname localhost
 bin/magento config:set catalog/search/elasticsearch7_server_port 9200
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 0
@@ -50,7 +55,7 @@ You may check your index at the server in case you Magento Catalog don't show i.
 Example Elastic Search at elastic.io
 https://cloud.elastic.co/login
 
-```
+```bash
 bin/magento config:set catalog/search/elasticsearch7_server_hostname i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io
 bin/magento config:set catalog/search/elasticsearch7_port 9243
 bin/magento config:set catalog/search/elasticsearch7_enable_auth 1
@@ -58,7 +63,7 @@ bin/magento config:set catalog/search/elasticsearch7_username xxxxxx
 bin/magento config:set catalog/search/elasticsearch7_password ******
 ```
 If errors occur check the service by using curl command (Note: -u option with username:password)
-```
+```bash
 curl -u xxxxxx:****** https://i-o-optimized-deployment-be8624.es.us-west1.gcp.cloud.es.io:9243
 ```
 # Error 
