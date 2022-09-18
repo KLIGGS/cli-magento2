@@ -40,7 +40,7 @@ nano <magento-root>/app/etc/di.xml
 Enable a valid Elastic Search 7 connection. Note: If an older version i.e. Elastic Search is installed Magento 2 backend configuration confirms a valid connection but it won't work. Elastic Search 7.1 ist MUST.
 
 #### Error PHP Code Dependeny Injection 
-Check your PHP Version you are really running. By command or by <?php phpinfo();?> in your <magento-root>/pub/ Folder. Consider to run the php cli with php7.4 -f instead of php -f
+Check your PHP Version you are really running. By command or by `<?php phpinfo();?>` in your `<magento-root>/pub/` directory. Consider to run the php cli with php7.4 -f instead of php -f
 ```php
 php7.4 <magento-root>/bin/magento setup:upgrade
 php7.4 <magento-root>/bin/magento setup:di:compile
