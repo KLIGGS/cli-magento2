@@ -1,14 +1,13 @@
 # Magento 2.4.3 CE Install
 
 
-Installation of Magento 2.4.3-p1 CE with some hints and solutions.
+Installation of Magento 2.4.3-p1 CE with some hints and solutions in short.
 
 ## General
 
-* Help https://devdocs.magento.com/guides/v2.4/install-gde/composer.html
+* [Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=en#phpunit) 
 * PHP Version > use 7.4 (not 8)
 * Elasticsearch 7 is **MUST**. Disabling like in older M2 Version won't work and magento 2 catalog disappears.
-* Commands on your own risk.
 
 ## Hints
 
