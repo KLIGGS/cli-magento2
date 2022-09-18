@@ -55,8 +55,22 @@ Find `.htaccess` files with option FollowSymLinks
 ```sh
   find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
 ```
+#### Error HTTP 400
 
-  
+CSS, JS and Media resources resulting in Error 400 or Error 500. Following directories have to be checked.
+
+<magento-root>/pub/static/
+<magento-root>/pub/media/
+
+* Access
+* Folder / File Permissions
+* SymLinksIfOwnerMatch in .htaccess files
+
+Run Magento CLI
+ ```php
+<magento-root>/bin/magento setup:static-content:deploy
+<magento-root>/bin/magento cache:flush
+``` 
 ## Elastic Search 7
 
 Magento 2.4.3 requires Elastic Search 7. If there is no connection you Product Catalog will not display.
@@ -104,7 +118,7 @@ show search engine
 ```php
 bin/magento config:show catalog/search/engine
 ```
-seat search engine
+set search engine
 ```php
 bin/magento config:set catalog/search/engine 'lmysql'
 ```
