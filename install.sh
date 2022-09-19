@@ -14,7 +14,6 @@ bin/magento setup:install \
 --base-url-secure=https://domain.com \
 --base-url=https://domain.com \
 --skip-db-validation \
---cleanup-database
 --db-host=localhost \
 --db-name=db_magento \
 --db-user=user_magento \
@@ -29,7 +28,7 @@ bin/magento setup:install \
 --language=de_DE \
 --currency=EUR \
 --timezone=Europe/Berlin \
---elasticsearch-host=https://kotxlcwi3k:4k880t9ya0@domain-1435784711.us-east-1.bonsaisearch.net \
+--elasticsearch-host=https://<username>:<password>@domain-1435784711.us-east-1.bonsaisearch.net \
 --elasticsearch-port=443 \
 --elasticsearch-enable-auth=true \
 --elasticsearch-username=<username-elastic> \
