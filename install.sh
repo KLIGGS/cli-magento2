@@ -16,13 +16,13 @@ bin/magento setup:install \
 --skip-db-validation \
 --db-host=localhost \
 --db-name=db_magento \
---db-user=user_magento \
---db-password='xxxxxx' \
+--db-user='<user-database>' \
+--db-password='<password-database' \
 --admin-firstname=User \
 --admin-lastname=Username \
 --admin-email=admin@domain.com \
---admin-user=<username> \
---admin-password=<password> \
+--admin-user='<user-magento>' \
+--admin-password='<password>-magento' \
 --use-rewrites=1 \
 --use-secure=1 \
 --language=de_DE \
@@ -31,7 +31,7 @@ bin/magento setup:install \
 --elasticsearch-host=https://<username>:<password>@domain-1435784711.us-east-1.bonsaisearch.net \
 --elasticsearch-port=443 \
 --elasticsearch-enable-auth=true \
---elasticsearch-username=<username-elastic> \
+--elasticsearch-username='<username-elastic>' \
 --elasticsearch-password='<password-elastic>'
 
  # disable 2-Way auth may not required in DEV
