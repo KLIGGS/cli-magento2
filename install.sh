@@ -58,4 +58,9 @@ magento cache:clean
 # check .htaccess files if HTTP Error 500 occurs
 find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
 
+# extend CLI with magerun
+cd ./bin
+curl -O https://files.magerun.net/n98-magerun2.phar
 
+# check your setup
+php n98-magerun2.phar sys:check
