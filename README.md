@@ -28,6 +28,9 @@ php7.4 bin/magento
 With Magento 2.4.3 some configurations changed. Some solutions to errors.
 
 #### Error Maria DB Version
+
+Current version of RDBMS is not supported. Used Version: 10.5.16-MariaDB-1:10.5.16+maria~bullseye. Supported versions: MySQL-8, MySQL-5.7, MariaDB-(10.2-10.4)```
+  
 Installing is aborted if Maria Database 10.5 is installed. Alter the di.xml file to parameter 10.[2-5] and run again.
 ```php
 nano <magento-root>/app/etc/di.xml
