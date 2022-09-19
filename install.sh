@@ -49,3 +49,8 @@ bin/magento module:disable Amazon_Core
 magento setup:di:compile
 magento setup:static-content:deploy
 magento cache:clean
+
+# check .htaccess files if HTTP Error 500 occurs
+find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
+
+
