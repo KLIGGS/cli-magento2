@@ -9,6 +9,11 @@
 cd ~/home/www/
 composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.3-p1
 
+mv project-community-edition public
+cd public
+
+# php7.4 or php may required to execute Magento CLI i.e. php7.4 bin/magento
+
 bin/magento setup:install \
 --cleanup-database \
 --base-url-secure=https://domain.com \
