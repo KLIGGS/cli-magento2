@@ -17,12 +17,12 @@ bin/magento setup:install \
 --db-host=localhost \
 --db-name=db_magento \
 --db-user='<user-database>' \
---db-password='<password-database' \
---admin-firstname=User \
---admin-lastname=Username \
+--db-password='<password-database>' \
+--admin-firstname=John \
+--admin-lastname=Doe \
 --admin-email=admin@domain.com \
 --admin-user='<user-magento>' \
---admin-password='<password>-magento' \
+--admin-password='<password>-magento>' \
 --use-rewrites=1 \
 --use-secure=1 \
 --language=de_DE \
