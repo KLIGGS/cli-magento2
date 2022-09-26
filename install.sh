@@ -8,7 +8,7 @@
 
 # sign in for key to dowload from repo at https://marketplace.magento.com/
 cd ~/home/www/
-composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.3-p1
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.3-p3
 
 mv project-community-edition public
 cd public
@@ -52,9 +52,9 @@ composer require magento/data-migration-tool:2.4.2
 bin/magento module:disable Amazon_Login Amazon_Payment Dotdigitalgroup_Email Dotdigitalgroup_Chat Dotdigitalgroup_ChatGraphQl Dotdigitalgroup_EmailGraphQl Dotdigitalgroup_Sms Klarna_Core Klarna_Ordermanagement Klarna_Kp Klarna_Onsitemessaging Klarna_KpGraphQl PayPal_Braintree PayPal_BraintreeGraphQl Temando_ShippingRemover Vertex_Tax Vertex_AddressValidationApi Vertex_RequestLoggingApi Vertex_RequestLogging Vertex_AddressValidation Yotpo_Yotpo
 bin/magento module:disable Amazon_Core
 
-magento setup:di:compile
-magento setup:static-content:deploy
-magento cache:clean
+bin/magento setup:di:compile
+bin/magento setup:static-content:deploy
+bin/magento cache:clean
 
 # check .htaccess files if HTTP Error 500 occurs
 find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
