@@ -67,8 +67,10 @@ php -r 'phpinfo(INFO_MODULES);'
 
 CSS, JS and Media resources resulting in Error 400 or Error 500. Following directories have to be checked.
 
+```sh
 <magento-root>/pub/static/
 <magento-root>/pub/media/
+```
 
 [Adobe Help configure permissions](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=en)
 * Access
