@@ -80,6 +80,22 @@ Run Magento CLI
 <magento-root>/bin/magento setup:static-content:deploy
 <magento-root>/bin/magento cache:flush
 ``` 
+
+#### Error Static CSS JS Files not loaded or generated
+In some hosting enviroments an error could be tracked down to the php runtime config php_flag engine. By default the value is 0. However apart from security considerations turning value to 1 loads static files.
+
+Open .htaccess in static directory
+ ```php
+ nano <magento-root>/pub/static/.htaccess
+ ``` 
+Edit values
+
+ ```php
+<IfModule mod_php7.c>
+php_flag engine 1
+</IfModule>
+``` 
+
 ## Elastic Search 7
 
 Magento 2.4.3 requires Elastic Search 7. If there is no connection you Product Catalog will not display.
