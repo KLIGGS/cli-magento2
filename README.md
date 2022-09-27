@@ -96,6 +96,12 @@ Edit values
 <IfModule mod_php7.c>
 php_flag engine 1
 </IfModule>
+```
+or comment the line
+ ```php
+<IfModule mod_php7.c>
+# php_flag engine 1
+</IfModule>
 ``` 
 
 ## Elastic Search 7
@@ -149,7 +155,7 @@ set search engine
 ```php
 bin/magento config:set catalog/search/engine 'lmysql'
 ```
-Enable Elastic Search
+Enable Elastic Search (Elasticsearch7 is default from M 2.4 CE)
 ```php
 bin/magento setup:install --enable-modules=Magento_InventoryElasticsearch,Magento_Elasticsearch7,Magento_Elasticsearch6,Magento_Elasticsearch
 bin/magento module:enable Magento_Elasticsearch7 Magento_InventoryElasticsearch
