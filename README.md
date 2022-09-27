@@ -1,7 +1,7 @@
 # Magento 2.4.3 CE Install
 
 
-Installation of Magento 2.4.3-p1 CE. Even it's well documentated here some hints and solutions in a short form worked on MAMP and hosting providers.
+Installation of Magento 2.4.3-p1, 2.4.3-p2, 2.4.3-p2 CE. Even it's well documentated here some hints and solutions in a short form worked on MAMP and hosting providers.
 
 ## General
 
