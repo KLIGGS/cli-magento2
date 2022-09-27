@@ -57,6 +57,12 @@ Find `.htaccess` files with option FollowSymLinks
 ```sh
   find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
 ```
+
+Find and Replace `.htaccess` files FollowSymLinks by SymLinksIfOwnerMatch
+```sh
+find ./ -name .htaccess -type f -exec sed -i -e 's/FollowSymLinks/SymLinksIfOwnerMatch/g' {} \;
+```
+
 Check php memory - 2G required and modules
 ```sh
 php -i | grep 'memory_limit'
