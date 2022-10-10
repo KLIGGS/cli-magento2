@@ -2,7 +2,7 @@
 
  #############################################################################
 #
-# description	Example CLI installing Magento 2.4.3-p1 CE
+# description	Example CLI installing Magento 2.4.3-p1 CE. Applies also to 2.4.5 (PHP 8.1)
 #
 # #############################################################################
 
@@ -62,6 +62,7 @@ find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
 # extend CLI with magerun
 cd ./bin
 curl -O https://files.magerun.net/n98-magerun2.phar
+chmod 755 n98-magerun2.phar
 
 # check your setup
 php n98-magerun2.phar sys:check
