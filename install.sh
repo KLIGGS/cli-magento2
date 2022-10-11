@@ -2,9 +2,17 @@
 
  #############################################################################
 #
-# description	Example CLI installing Magento 2.4.3-p1 CE. Applies also to 2.4.5 (PHP 8.1)
+# description	Example CLI installing Magento 2.4.3-p1 CE.
 #
+# @require Magento 2.4.4 > PHP 8.1
+# @require Magento 2.4.3 > PHP 7.2.3 (note 7.2.0 has a bug regarding loading CSS)
 # #############################################################################
+
+# check system enviroment
+# check php
+php -v
+which php
+php --ini | grep "Loaded Configuration File"
 
 # sign in for key to dowload from repo at https://marketplace.magento.com/
 cd ~/home/www/
@@ -40,6 +48,13 @@ bin/magento setup:install \
 --elasticsearch-username='<username-elastic>' \
 --elasticsearch-password='<password-elastic>'
 
+# file and owner permissions
+# 
+cd ../<magento-root>
+find var generated vendor pub/static pub/media app/etc -type f -exec chmod u+w {} + 
+find var generated vendor pub/static pub/media app/etc -type d -exec chmod u+w {} + 
+chmod u+x bin/magento
+
  # disable 2-Way auth may not required in DEV
 bin/magento module:disable Magento_TwoFactorAuth 
 bin/magento cache:flush 
@@ -57,6 +72,7 @@ bin/magento setup:static-content:deploy
 bin/magento cache:clean
 
 # check .htaccess files if HTTP Error 500 occurs
+# most providers don't allow FollowSymLinks anymore
 find ./ -name .htaccess -type f -exec grep -Hni "FollowSymLinks" {} \;
 
 # extend CLI with magerun
@@ -66,3 +82,6 @@ chmod 755 n98-magerun2.phar
 
 # check your setup
 php n98-magerun2.phar sys:check
+
+# optionally delete MacOS .DS_Store
+find ./ -name .DS_Store -exec /bin/rm -f {} \; -print
